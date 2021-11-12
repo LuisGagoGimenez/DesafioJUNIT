@@ -20,4 +20,5 @@ public interface CarritoCompraService {
 	Double aplicarDescuento(Integer idArticulo, Double porcentaje);
 	
 	Integer insertarArticuloAndGetID(Articulo a);
+	
 }

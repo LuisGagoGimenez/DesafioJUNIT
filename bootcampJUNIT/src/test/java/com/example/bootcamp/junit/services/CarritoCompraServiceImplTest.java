@@ -84,9 +84,10 @@ class CarritoCompraServiceImplTest {
 		Integer id = carritoCompraService.insertarArticuloAndGetID(a);
 
 		assertEquals(5, id);
-
+		
+		assertTrue(carritoCompraService.carrito.contains(a));
+		
 		verify(baseDatos, times(1)).insertarArticuloAndGetId(a);
-		verify(carritoCompraService.carrito).add(a);
 
 	}
 
